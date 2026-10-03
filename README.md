@@ -1,10 +1,10 @@
 # ActuchosMac
 
-ActuchosMac es una app nativa para macOS (SwiftUI) que revisa **todo** lo que tienes instalado —aplicaciones, macOS, Homebrew, App Store, Node, Python, Rust, editores, herramientas de IA y sus **dependencias** (pip, npm, gems, cargo, pipx, uv)— y te deja actualizarlo con un botón: todo de golpe o solo lo que marques.
+Mi invento para revisar las actualizaciones del Mac sin ir abriendo veinte cosas. Apps, macOS, Homebrew, App Store, Node, Python, Rust, editores, herramientas de IA y paquetes: lo junta en una app nativa hecha con SwiftUI y te deja actualizar todo o solo lo que marques.
 
-Nunca exagera: si algo no se puede comprobar con fiabilidad aparece como *no comprobado*, no como *al día*.
+Y si algo no se puede comprobar, te dice **«no comprobado»**. Darlo por actualizado porque sí sería echarle demasiada fe, chacho.
 
-## Qué hace
+## Qué puedes hacer con esto
 
 - **Un escaneo de solo lectura** con 17 proveedores en paralelo. Los resultados aparecen según llegan y, al abrir, se muestra al instante el inventario anterior mientras se comprueba de nuevo.
 - **Actualizar todo** o **Actualizar selección**: marca las casillas de lo que quieras (o "Seleccionar actualizables" por sección) y pulsa un botón. Lo que comparte gestor va en orden; lo demás, en paralelo.
@@ -26,7 +26,7 @@ Nunca exagera: si algo no se puede comprobar con fiabilidad aparece como *no com
 - **Verificación**: después de actualizar, vuelve a leer la versión instalada. Un código de salida 0 no basta para dar algo por bueno.
 - Simulación del plan, búsqueda, filtros, informe en Markdown/JSON, log técnico que oculta secretos e historial local.
 
-## Qué no hace
+## Hasta dónde llega
 
 - Pedir, guardar ni automatizar tu contraseña de administrador. Las actualizaciones de Apple que la necesitan usan el diálogo del propio macOS.
 - Instalar nada que no supere las comprobaciones de arriba, ni ejecutar scripts remotos con una tubería al shell.
@@ -41,10 +41,10 @@ Nunca exagera: si algo no se puede comprobar con fiabilidad aparece como *no com
 
 Homebrew, `mas`, NVM y el resto de gestores son opcionales; si faltan, simplemente hay menos que revisar.
 
-## Compilar y ejecutar
+## Cómo arrancarlo
 
 ```sh
-git clone https://github.com/<tu-usuario>/ActuchosMac.git
+git clone https://github.com/erchosky/ActuchosMac.git
 cd ActuchosMac
 open ActuchosMac.xcodeproj
 ```
@@ -65,7 +65,7 @@ Para generar un `.zip` de la app firmada ad hoc en `dist/`:
 
 La app no está notarizada: la primera vez, haz clic derecho sobre ella y elige **Abrir**.
 
-## Tests
+## Comprobar que todo sigue en su sitio
 
 ```sh
 xcodebuild -project ActuchosMac.xcodeproj -scheme ActuchosMac -destination 'platform=macOS' test CODE_SIGNING_ALLOWED=NO
