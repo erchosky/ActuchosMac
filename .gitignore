@@ -1,0 +1,16 @@
+# Build output
+.build/
+build/
+dist/
+DerivedData/
+*.xcresult
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+
+# Local artifacts and diagnostics (never commit)
+Artifacts/
+
+# macOS
+.DS_Store
