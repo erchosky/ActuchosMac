@@ -1,6 +1,6 @@
 # ActuchosMac
 
-Mi invento para revisar las actualizaciones del Mac sin ir abriendo veinte cosas. Apps, macOS, Homebrew, App Store, Node, Python, Rust, editores, herramientas de IA y paquetes: lo junta en una app nativa hecha con SwiftUI y te deja actualizar todo o solo lo que marques.
+Mi invento para revisar las actualizaciones del Mac sin abrir veinte aplicaciones distintas. **ActuchosMac** reúne apps, macOS, Homebrew, App Store, Node, Python, Rust, editores, herramientas de IA y paquetes en una app nativa con SwiftUI; puedes actualizar todo o elegir qué marcar.
 
 Y si algo no se puede comprobar, te dice **«no comprobado»**. Darlo por actualizado porque sí sería echarle demasiada fe, chacho.
 
