@@ -1,10 +1,14 @@
 # ActuchosMac
 
-Mi invento para revisar las actualizaciones del Mac sin abrir veinte aplicaciones distintas. **ActuchosMac** reúne apps, macOS, Homebrew, App Store, Node, Python, Rust, editores, herramientas de IA y paquetes en una app nativa con SwiftUI; puedes actualizar todo o elegir qué marcar.
+Centro de actualizaciones para macOS, aplicaciones y herramientas de desarrollo, construido con SwiftUI.
 
-Y si algo no se puede comprobar, te dice **«no comprobado»**. Darlo por actualizado porque sí sería echarle demasiada fe, chacho.
+Reúne comprobaciones de diferentes proveedores, permite revisar una selección antes de actualizar y vuelve a consultar la versión instalada al terminar. Cuando una comprobación no está disponible, muestra «no comprobado».
 
-## Qué puedes hacer con esto
+[Funciones principales](#funciones-principales) · [Acciones excluidas](#acciones-excluidas) · [Requisitos](#requisitos) · [Instalación y arranque](#instalación-y-arranque) · [Pruebas y verificación](#pruebas-y-verificación) · [Modo demostración](#modo-demostración)
+
+---
+
+## Funciones principales
 
 - **Un escaneo de solo lectura** con 17 proveedores en paralelo. Los resultados aparecen según llegan y, al abrir, se muestra al instante el inventario anterior mientras se comprueba de nuevo.
 - **Actualizar todo** o **Actualizar selección**: marca las casillas de lo que quieras (o "Seleccionar actualizables" por sección) y pulsa un botón. Lo que comparte gestor va en orden; lo demás, en paralelo.
@@ -26,7 +30,7 @@ Y si algo no se puede comprobar, te dice **«no comprobado»**. Darlo por actual
 - **Verificación**: después de actualizar, vuelve a leer la versión instalada. Un código de salida 0 no basta para dar algo por bueno.
 - Simulación del plan, búsqueda, filtros, informe en Markdown/JSON, log técnico que oculta secretos e historial local.
 
-## Hasta dónde llega
+## Acciones excluidas
 
 - Pedir, guardar ni automatizar tu contraseña de administrador. Las actualizaciones de Apple que la necesitan usan el diálogo del propio macOS.
 - Instalar nada que no supere las comprobaciones de arriba, ni ejecutar scripts remotos con una tubería al shell.
@@ -41,7 +45,7 @@ Y si algo no se puede comprobar, te dice **«no comprobado»**. Darlo por actual
 
 Homebrew, `mas`, NVM y el resto de gestores son opcionales; si faltan, simplemente hay menos que revisar.
 
-## Cómo arrancarlo
+## Instalación y arranque
 
 ```sh
 git clone https://github.com/erchosky/ActuchosMac.git
@@ -65,7 +69,7 @@ Para generar un `.zip` de la app firmada ad hoc en `dist/`:
 
 La app no está notarizada: la primera vez, haz clic derecho sobre ella y elige **Abrir**.
 
-## Comprobar que todo sigue en su sitio
+## Pruebas y verificación
 
 ```sh
 xcodebuild -project ActuchosMac.xcodeproj -scheme ActuchosMac -destination 'platform=macOS' test CODE_SIGNING_ALLOWED=NO
